@@ -12,35 +12,35 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       <header className="bg-red-700 text-white shadow-md p-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center space-x-2 justify-center md:justify-start">
             <Activity size={32} />
             <h1 className="text-2xl font-bold">HemoSim</h1>
           </div>
           {!isEvaluating && (
-            <nav className="flex space-x-1">
+            <nav className="flex flex-wrap justify-center gap-2">
               <button 
                 onClick={() => setActiveTab('sim')}
-              className={`px-4 py-2 rounded flex items-center gap-2 ${activeTab === 'sim' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
+              className={`px-3 py-2 text-sm md:text-base rounded flex items-center gap-2 ${activeTab === 'sim' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
             >
               <Activity size={18} /> Simulación
             </button>
             <button 
               onClick={() => setActiveTab('comp')}
-              className={`px-4 py-2 rounded flex items-center gap-2 ${activeTab === 'comp' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
+              className={`px-3 py-2 text-sm md:text-base rounded flex items-center gap-2 ${activeTab === 'comp' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
             >
               <Activity size={18} /> Comparación
             </button>
 
             <button 
               onClick={() => setActiveTab('prac')}
-              className={`px-4 py-2 rounded flex items-center gap-2 ${activeTab === 'prac' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
+              className={`px-3 py-2 text-sm md:text-base rounded flex items-center gap-2 ${activeTab === 'prac' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
             >
               <BookOpen size={18} /> Práctica
             </button>
             <button 
               onClick={() => setActiveTab('eval')}
-              className={`px-4 py-2 rounded flex items-center gap-2 ${activeTab === 'eval' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
+              className={`px-3 py-2 text-sm md:text-base rounded flex items-center gap-2 ${activeTab === 'eval' ? 'bg-red-800 font-bold' : 'hover:bg-red-600'}`}
             >
                 <GraduationCap size={18} /> Evaluación
               </button>
